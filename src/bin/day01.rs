@@ -44,7 +44,7 @@ fn part2(data: &(Vec<i32>, Vec<i32>)) -> i32 {
 
   let mut similarity_score = 0;
 
-  for x in list1.iter() {
+  for &x in list1.iter() {
     similarity_score += x * frequencies.get(&x).copied().unwrap_or(0);
   }
 
